@@ -1,0 +1,19 @@
+{
+    "name": "dom-event-to-json",
+    "version": "1.0.0",
+    "description": "For those cases where developer tools is not available",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cosmn/dom-event-to-json.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cosmn/dom-event-to-json/issues"
+    },
+    "homepage": "https://github.com/cosmn/dom-event-to-json#readme"
+}
