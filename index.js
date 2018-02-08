@@ -6,15 +6,9 @@ const domEventToJSON = (eventData, depth) => {
 };
 
 const traverse = (eventData, seenObjects, currentDepth, maxDepth) => {
-    if (currentDepth >= maxDepth)
-        return '[object Object depth:' + currentDepth + ']';
+    if (currentDepth >= maxDepth) return '[object Object]';
 
     const json = {};
-    const objectType = Object.prototype.toString.call(eventData);
-    const isArray =
-        objectType == '[object Array]' ||
-        objectType == '[object HTMLCollection]';
-    console.log(isArray);
 
     for (let key in eventData) {
         const value = eventData[key];
