@@ -4,6 +4,12 @@ For those cases where developer tools is not available
 import domEventToJSON from 'dom-event-to-json'
 
 element.addEventListener('click', (event) => {
-    console.log(domEventToJSON(event))
+    fetch('/debug', {
+        method: 'POST',
+        body: JSON.stringify( domEventToJSON(event) ),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+    })
 })
 ```
