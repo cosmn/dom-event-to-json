@@ -1,10 +1,12 @@
 {
     "name": "dom-event-to-json",
-    "version": "1.0.0",
-    "description": "For those cases where developer tools is not available",
-    "main": "index.js",
+    "version": "1.0.1",
+    "description": "For those cases where developer tools are not available",
+    "main": "lib/domEventToJSON.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "distbuild":
+            "babel lib/domEventToJSON.js --out-file dist/domEventToJSON.js"
     },
     "repository": {
         "type": "git",
@@ -15,5 +17,20 @@
     "bugs": {
         "url": "https://github.com/cosmn/dom-event-to-json/issues"
     },
-    "homepage": "https://github.com/cosmn/dom-event-to-json#readme"
+    "homepage": "https://github.com/cosmn/dom-event-to-json#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+        "babel-preset-env": "^1.7.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "env",
+                {
+                    "modules": "umd"
+                }
+            ]
+        ]
+    }
 }
